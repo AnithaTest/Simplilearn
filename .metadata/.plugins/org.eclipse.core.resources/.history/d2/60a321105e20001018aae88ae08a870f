@@ -1,0 +1,59 @@
+package stepDefinitions;
+
+import java.time.Duration;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+import io.cucumber.java.en.*;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+import pageObjects.SaucedemoPageObject;
+
+public class SauceddemoStepDefinition {
+    public WebDriver driver;
+    public SaucedemoPageObject saucedemo;
+
+    @Given("User is on the sauce demo login page {string}")
+    public void user_is_on_the_sauce_demo_login_page(String url) {
+        driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver.manage().window().maximize();
+        driver.get(url);
+        saucedemo = new SaucedemoPageObject(driver);
+    }
+
+    @When("user logs in to the application {string} and {string}")
+    public void user_logs_in_to_the_application(String username, String password) {
+        saucedemo.username.sendKeys(username);
+        saucedemo.password.sendKeys(password);
+        saucedemo.login.click();
+    }
+
+    @Then("user applies filter and adds the item to the cart")
+    public void user_applies_filter_and_adds_the_item_to_the_cart() {
+        Select drpdwn = new Select(saucedemo.filter);
+        drpdwn.selectByIndex(2);
+        saucedemo.product.click();
+        saucedemo.AddtoCart.click();
+    }
+
+    @Then("user places the order")
+    public void user_places_the_order() {
+        saucedemo.Cart.click();
+        saucedemo.checkout.click();
+        saucedemo.firstName.sendKeys("Anitha");
+        saucedemo.lastname.sendKeys("Vijay");
+        saucedemo.postalCode.sendKeys("654321");
+        saucedemo.book.click();
+        saucedemo.finish.click();
+        String confirm = saucedemo.confirmMessage.getText();
+        System.out.println("Confirmation: " + confirm);
+        saucedemo.backToProducts.click();
+    }
+
+    @And("user close the browser")
+    public void user_close_the_browser() {
+        driver.quit();
+    }
+}

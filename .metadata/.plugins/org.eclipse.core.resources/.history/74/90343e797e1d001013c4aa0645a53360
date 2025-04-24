@@ -1,0 +1,12 @@
+Feature: Test Login Functionality
+
+Scenario: Login to the application and check if the user is able to login successfully
+
+
+Background: 
+Given User is on the login page
+
+
+When user enters logiin credentials "userid" and "Password"
+Then user clicks on login button
+And user logs in successfully to the app

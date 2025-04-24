@@ -1,0 +1,8 @@
+Feature: Test sauce demo website
+
+Scenario: Test add to cart and check out functionality
+
+Given User is on the sauce demo login page
+When user logs in to the application
+Then user applies filter and adds the item to the cart
+And user places the order

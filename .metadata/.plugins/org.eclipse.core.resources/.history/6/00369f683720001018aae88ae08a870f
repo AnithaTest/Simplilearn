@@ -1,0 +1,19 @@
+package testRunner;
+
+import io.cucumber.junit.CucumberOptions;
+
+@CucumberOptions(
+		features="src/test/java/features/Saucedemo.feature",
+		glue= "stepDefinitions",
+		plugin= {
+				
+		}
+		
+		
+		)
+
+public class TestRunner 
+
+{
+
+}

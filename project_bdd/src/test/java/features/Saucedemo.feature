@@ -1,0 +1,12 @@
+Feature: Test sauce demo website
+
+  Scenario Outline: Test add to cart and check out functionality
+    Given User is on the sauce demo login page "<url>"
+    When user logs in to the application "<username>" and "<password>"
+    Then user applies filter and adds the item to the cart
+    Then user places the order
+    And user close the browser
+
+    Examples:
+      | url                         | username      | password     |
+      | https://www.saucedemo.com/ | standard_user | secret_sauce |

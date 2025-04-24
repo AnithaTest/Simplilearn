@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libraryInfos>
+    <libraryInfo home="/usr/local/Cellar/openjdk@8/1.8.0-412/libexec/openjdk.jdk/Contents/Home" version="1.8.0_412">
+        <bootpath>
+            <entry path="/usr/local/Cellar/openjdk@8/1.8.0-412/libexec/openjdk.jdk/Contents/Home/jre/lib/resources.jar"/>
+            <entry path="/usr/local/Cellar/openjdk@8/1.8.0-412/libexec/openjdk.jdk/Contents/Home/jre/lib/rt.jar"/>
+            <entry path="/usr/local/Cellar/openjdk@8/1.8.0-412/libexec/openjdk.jdk/Contents/Home/jre/lib/sunrsasign.jar"/>
+            <entry path="/usr/local/Cellar/openjdk@8/1.8.0-412/libexec/openjdk.jdk/Contents/Home/jre/lib/jsse.jar"/>
+            <entry path="/usr/local/Cellar/openjdk@8/1.8.0-412/libexec/openjdk.jdk/Contents/Home/jre/lib/jce.jar"/>
+            <entry path="/usr/local/Cellar/openjdk@8/1.8.0-412/libexec/openjdk.jdk/Contents/Home/jre/lib/charsets.jar"/>
+            <entry path="/usr/local/Cellar/openjdk@8/1.8.0-412/libexec/openjdk.jdk/Contents/Home/jre/lib/jfr.jar"/>
+            <entry path="/usr/local/Cellar/openjdk@8/1.8.0-412/libexec/openjdk.jdk/Contents/Home/jre/classes"/>
+        </bootpath>
+        <extensionDirs>
+            <entry path="/Users/anitha.vijay/Library/Java/Extensions"/>
+            <entry path="/usr/local/Cellar/openjdk@8/1.8.0-412/libexec/openjdk.jdk/Contents/Home/jre/lib/ext"/>
+            <entry path="/Library/Java/Extensions"/>
+            <entry path="/Network/Library/Java/Extensions"/>
+            <entry path="/System/Library/Java/Extensions"/>
+            <entry path="/usr/lib/java"/>
+        </extensionDirs>
+        <endorsedDirs>
+            <entry path="/usr/local/Cellar/openjdk@8/1.8.0-412/libexec/openjdk.jdk/Contents/Home/jre/lib/endorsed"/>
+        </endorsedDirs>
+    </libraryInfo>
+    <libraryInfo home="/Users/anitha.vijay/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.macosx.x86_64_23.0.1.v20241024-1700/jre" version="23.0.1"/>
+    <libraryInfo home="/usr/local/Cellar/openjdk@17/17.0.14/libexec/openjdk.jdk/Contents/Home" version="17.0.14"/>
+    <libraryInfo home="/Users/anitha.vijay/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.macosx.x86_64_23.0.1.v20241024-1700" version="23.0.1">
+        <bootpath>
+            <entry path="null"/>
+        </bootpath>
+        <extensionDirs>
+            <entry path="null"/>
+        </extensionDirs>
+        <endorsedDirs>
+            <entry path="null"/>
+        </endorsedDirs>
+    </libraryInfo>
+</libraryInfos>

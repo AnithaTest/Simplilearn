@@ -1,0 +1,42 @@
+package stepDefinitions;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class loginStepDefinitions
+{
+	
+	public static WebDriver driver;
+	
+	@Given("User is on the login page")
+	public void user_is_on_the_login_page() 
+	{
+	   driver.get("https://the-internet.herokuapp.com/login");
+	   driver.manage().window().maximize();
+	   
+	}
+
+	@When("user enters logiin credentials {string} and {string}")
+	public void user_enters_logiin_credentials_and(String userid, String password) {
+	   driver.findElement(By.id("username")).sendKeys(userid);
+	   driver.findElement(By.id("password")).sendKeys(password);
+	}
+
+	@Then("user clicks on login button")
+	public void user_clicks_on_login_button()
+	{
+		driver.findElement(By.className("radius")).submit();
+	}
+
+	@Then("user logs in successfully to the app")
+	public void user_logs_in_successfully_to_the_app() {
+	   String flashMessage =  driver.findElement(By.id("flash")).getText();
+	   System.out.println(flashMessage);
+	}
+
+
+}
